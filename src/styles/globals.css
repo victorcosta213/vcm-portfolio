@@ -1,0 +1,17 @@
+:root { --radius: 14px; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+html, body, #root { width: 100%; max-width: 100vw; overflow-x: hidden; }
+
+.container { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 768px) { .container { padding: 0 24px; } }
+@media (min-width: 1200px) { .container { max-width: 1200px; } }
+
