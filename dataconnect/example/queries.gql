@@ -1,0 +1,25 @@
+mutation CreateNewProject($title: String!, $description: String!, $status: String!, $categoryId: UUID, $userId: UUID, $behanceLink: String, $githubLink: String, $liveDemoLink: String, $thumbnailUrl: String) @auth(level: USER) {
+  project_insert(data: {title: $title, description: $description, status: $status, categoryId: $categoryId, userId: $userId, behanceLink: $behanceLink, githubLink: $githubLink, liveDemoLink: $liveDemoLink, thumbnailUrl: $thumbnailUrl})
+}
+
+query ListProjectsByCategory($categoryId: UUID!) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  projects(where: {categoryId: {eq: $categoryId}}) {
+    id
+    title
+    description
+    status
+  }
+}
+
+mutation UpdateProjectDescription($id: UUID!, $description: String!) @auth(level: USER) {
+  project_update(key: {id: $id}, data: {description: $description})
+}
+
+query GetUserProjects @auth(level: USER) {
+  projects(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    title
+    description
+    status
+  }
+}

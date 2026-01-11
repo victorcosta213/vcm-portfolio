@@ -1,0 +1,68 @@
+mutation CreateSeedData @transaction @auth(level: PUBLIC, insecureReason: "This operation is for seeding the database with initial data and is safe to expose.") {
+  category_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      name: "Technology",
+      description: "Projects related to software and hardware."
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      name: "Design",
+      description: "Creative projects focusing on visual and user experience."
+    }
+  ])
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440002",
+      uid: "user123",
+      displayName: "Demo User 1",
+      email: "demo1@example.com",
+      createdAt: "2024-01-01T00:00:00Z"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440003",
+      uid: "user456",
+      displayName: "Demo User 2",
+      email: "demo2@example.com",
+      createdAt: "2024-01-01T00:00:00Z"
+    }
+  ])
+  project_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440004",
+      categoryId: "550e8400-e29b-41d4-a716-446655440000",
+      userId: "550e8400-e29b-41d4-a716-446655440002",
+      title: "Awesome Project 1",
+      description: "A cool project using the latest tech.",
+      status: "In Progress",
+      createdAt: "2024-01-15T00:00:00Z",
+      updatedAt: "2024-02-01T00:00:00Z"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440005",
+      categoryId: "550e8400-e29b-41d4-a716-446655440001",
+      userId: "550e8400-e29b-41d4-a716-446655440003",
+      title: "Creative Design Project",
+      description: "A visually stunning design project.",
+      status: "Completed",
+      createdAt: "2024-02-01T00:00:00Z",
+      updatedAt: "2024-02-15T00:00:00Z"
+    }
+  ])
+  media_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440006",
+      projectId: "550e8400-e29b-41d4-a716-446655440004",
+      mediaType: "image",
+      url: "http://example.com/image1.jpg",
+      order: 1
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440007",
+      projectId: "550e8400-e29b-41d4-a716-446655440005",
+      mediaType: "video",
+      url: "http://example.com/video1.mp4",
+      order: 1
+    }
+  ])
+}

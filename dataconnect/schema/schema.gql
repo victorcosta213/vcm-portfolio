@@ -1,0 +1,49 @@
+type User @table {
+  uid: String!
+  displayName: String!
+  email: String!
+  createdAt: Timestamp!
+  bio: String
+  profilePictureUrl: String
+  linkedinUrl: String
+  githubUrl: String
+  personalWebsiteUrl: String
+}
+
+type Project @table {
+  title: String!
+  description: String!
+  status: String! # "Draft", "Published", "Archived"
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  user: User
+  category: Category
+  thumbnailUrl: String
+  githubLink: String
+  liveDemoLink: String
+  behanceLink: String
+}
+
+type Idea @table {
+  title: String!
+  concept: String!
+  visibility: String! # "Private", "Public"
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  user: User
+  tags: [String]
+  potentialNextSteps: String
+}
+
+type Media @table {
+  url: String!
+  mediaType: String! # "Image", "Video"
+  order: Int!
+  project: Project
+  caption: String
+}
+
+type Category @table {
+  name: String!
+  description: String
+}

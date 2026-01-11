@@ -1,6 +1,6 @@
 import DFDImg from "../assets/DFD.png";
 import EstoqueImg from "../assets/almoxarifado.png";  
-//import LicinautaImg from "../assets/licinauta.png";  
+import LicinautaImg from "../assets/LicinautaImg.png";  
 
 export type Project = {
   id: string;
@@ -34,7 +34,9 @@ export const projects: Project[] = [
       "Monitoramento de processos licitatórios (CRT-03): filtros, status, relatórios e exportação.",
     year: "2025",
     stack: ["React", "Firebase", "Ant Design"],
-    cover: EstoqueImg, 
+    demo: "https://licita-crt-v-2-0.vercel.app/login",
+    repo: "https://github.com/victorcosta213/LicitaCRT_V_2_0",
+    cover: LicinautaImg, 
     highlights: ["Gráficos e Gantt", "Filtros avançados", "Exportação PDF/Excel"],
   },
   {
