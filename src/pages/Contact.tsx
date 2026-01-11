@@ -69,23 +69,14 @@ export default function Contact() {
                   <Input placeholder="voce@email.com" />
                 </Form.Item>
 
-                <Form.Item label="Assunto" name="subject">
-                  <Input placeholder="Sobre o quê vamos falar?" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Mensagem"
-                  name="message"
-                  rules={[
-                    { required: true, message: "Escreva sua mensagem" },
-                    { min: 10, message: "Conte um pouco mais (mín. 10 caracteres)" },
-                  ]}
+                <Button
+                  type="primary"
+                  size="large"
+                  href="https://wa.me/5581995139021?text=Quero%20falar%20sobre%20o%20portf%C3%B3lio"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <TextArea placeholder="Me conte a sua ideia :)" autoSize={{ minRows: 5, maxRows: 10 }} />
-                </Form.Item>
-
-                <Button type="primary" htmlType="submit" loading={loading} size="large">
-                  Enviar
+                  Fale comigo
                 </Button>
               </Form>
             </Card>
@@ -112,7 +103,7 @@ export default function Contact() {
                 <ul style={{ margin: 0, paddingLeft: 18 }}>
                   <li>Validação de campos e feedback instantâneo</li>
                   <li>Armazenamento no Firestore</li>
-                  <li>E-mail via Cloud Functions (SendGrid)</li>
+                  <li>Clique no Botão para Falar comigo</li>
                 </ul>
               </div>
             </Card>
