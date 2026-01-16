@@ -1,5 +1,5 @@
 import { Card, Tag, Space, Button, Typography } from "antd";
-import { Project } from "../../data/projects";
+import type { Project } from "../../data/projects";
 import { GithubOutlined, LinkOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
 
