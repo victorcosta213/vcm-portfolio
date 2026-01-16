@@ -1,6 +1,8 @@
 import DFDImg from "../assets/DFD.png";
 import EstoqueImg from "../assets/almoxarifado.png";  
 import LicinautaImg from "../assets/LicinautaImg.png";  
+import GeoFiscal from "../assets/GeoFiscal.png"; 
+
 
 export type Project = {
   id: string;
@@ -49,6 +51,18 @@ export const projects: Project[] = [
     demo: "https://almoxarifado-flame.vercel.app/",
     repo: "https://github.com/victorcosta213/Almoxarifado",
     cover: EstoqueImg, 
+    highlights: ["Importar .xlsx", "Alertas", "Relatórios rápidos"],
+  },
+    {
+    id: "fiscal",
+    title: "GeoFiscal",
+    description:
+      "App para registro de fiscalização e mapa interativo para rotas",
+    year: "2026",
+    stack: ["React", "Firebase", "Bootstrap", "leaflet"],
+    demo: "https://geo-fiscal.vercel.app/",
+    repo: "https://github.com/victorcosta213/GeoFiscal",
+    cover: GeoFiscal, 
     highlights: ["Importar .xlsx", "Alertas", "Relatórios rápidos"],
   },
 ];
