@@ -43,7 +43,7 @@ import Portrait from "../assets/minha_foto.jpg";
 
 const { Title, Paragraph, Text } = Typography;
 
-function GalleryImage({
+function _GalleryImage({
   src,
   alt,
   height = 340,
