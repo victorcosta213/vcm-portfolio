@@ -1,8 +1,7 @@
 import DFDImg from "../assets/DFD.png";
-import EstoqueImg from "../assets/almoxarifado.png";  
-import LicinautaImg from "../assets/LicinautaImg.png";  
-import GeoFiscal from "../assets/GeoFiscal.png"; 
-
+import EstoqueImg from "../assets/almoxarifado.png";
+import LicinautaImg from "../assets/LicinautaImg.png";
+import GeoFiscalImg from "../assets/GeoFiscal.png";
 
 export type Project = {
   id: string;
@@ -10,7 +9,7 @@ export type Project = {
   description: string;
   year: string;
   stack: string[];
-  cover: string;          
+  cover: string;        
   demo?: string;
   repo?: string;
   highlights?: string[];
@@ -24,7 +23,7 @@ export const projects: Project[] = [
       "Plataforma com o objetivo de automatizar o preenchimento de documentos.",
     year: "2025",
     stack: ["React", "Ant Design", "Firebase", "API - Python"],
-    cover: DFDImg, 
+    cover: DFDImg,
     demo: "https://dfd-frontend.vercel.app/",
     repo: "https://github.com/victorcosta213/dfd-frontend",
     highlights: ["Api de Input", "Edição Rápida"],
@@ -36,9 +35,9 @@ export const projects: Project[] = [
       "Monitoramento de processos licitatórios (CRT-03): filtros, status, relatórios e exportação.",
     year: "2025",
     stack: ["React", "Firebase", "Ant Design"],
+    cover: LicinautaImg,
     demo: "https://licita-crt-v-2-0.vercel.app/login",
     repo: "https://github.com/victorcosta213/LicitaCRT_V_2_0",
-    cover: LicinautaImg, 
     highlights: ["Gráficos e Gantt", "Filtros avançados", "Exportação PDF/Excel"],
   },
   {
@@ -48,21 +47,20 @@ export const projects: Project[] = [
       "Web app para controle de entradas/saídas, alerta de estoque baixo e importação de planilhas para ajudar na gestão do Almoxarifado.",
     year: "2025",
     stack: ["React", "Firebase", "Bootstrap"],
+    cover: EstoqueImg,
     demo: "https://almoxarifado-flame.vercel.app/",
     repo: "https://github.com/victorcosta213/Almoxarifado",
-    cover: EstoqueImg, 
     highlights: ["Importar .xlsx", "Alertas", "Relatórios rápidos"],
   },
-    {
+  {
     id: "fiscal",
     title: "GeoFiscal",
-    description:
-      "App para registro de fiscalização e mapa interativo para rotas",
+    description: "App para registro de fiscalização e mapa interativo para rotas",
     year: "2026",
-    stack: ["React", "Firebase", "Bootstrap", "leaflet"],
+    stack: ["React", "Firebase", "Bootstrap", "Leaflet"],
+    cover: GeoFiscalImg,
     demo: "https://geo-fiscal.vercel.app/",
     repo: "https://github.com/victorcosta213/GeoFiscal",
-    cover: GeoFiscal, 
-    highlights: ["Importar .xlsx", "Alertas", "Relatórios rápidos"],
+    highlights: ["Mapa interativo", "Rotas", "Registro em campo"],
   },
 ];
